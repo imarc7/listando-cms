@@ -15,7 +15,7 @@ export default ({ env }) => {
           user: env('DATABASE_USERNAME'),
           password: env('DATABASE_PASSWORD'),
           ssl: {
-            ca: fs.readFileSync(`${__dirname}/../certs/do-root.crt`).toString()
+            ca: fs.readFileSync(`${__dirname}/../../certs/do-root.crt`, 'utf8')
           },
         },
         pool: {

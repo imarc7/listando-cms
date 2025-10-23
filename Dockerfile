@@ -5,6 +5,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends python3 build-essential && rm -rf /var/lib/apt/lists/*
 
 COPY package.json package-lock.json ./
+COPY certs ./certs
 # BuildKit cache for npm (requires DOCKER_BUILDKIT=1)
 RUN --mount=type=cache,target=/root/.npm npm ci
 
