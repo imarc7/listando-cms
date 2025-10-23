@@ -5,12 +5,6 @@ export default ({ env }) => {
   const client = env('DATABASE_CLIENT', 'sqlite');
 
   if (client === 'postgres') {
-    // Optional: load CA from file or env
-    const ca = env('DATABASE_CA') || (() => {
-      const caPath = path.join(__dirname, '../certs/do-root.crt');
-      return fs.existsSync(caPath) ? fs.readFileSync(caPath, 'utf8') : undefined;
-    })();
-
     return {
       connection: {
         client: 'postgres',
@@ -20,12 +14,9 @@ export default ({ env }) => {
           database: env('DATABASE_NAME'),
           user: env('DATABASE_USERNAME'),
           password: env('DATABASE_PASSWORD'),
-          ssl: env.bool('DATABASE_SSL', true)
-            ? {
-                rejectUnauthorized: true,
-                ca,
-              }
-            : false,
+          ssl: {
+            ca: fs.readFileSync(`${__dirname}/../certs/do-root.crt`).toString()
+          },
         },
         pool: {
           min: env.int('DATABASE_POOL_MIN', 2),
