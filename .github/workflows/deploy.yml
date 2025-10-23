@@ -80,22 +80,22 @@ jobs:
                 --name listando-cms \
                 --restart unless-stopped \
                 -p 127.0.0.1:1337:1337 \
-                -e HOST='${{ secrets.STRAPI_HOST }}' \
-                -e PORT='${{ secrets.STRAPI_PORT }}' \
-                -e APP_KEYS='${{ secrets.STRAPI_APP_KEYS }}' \
-                -e API_TOKEN_SALT='${{ secrets.STRAPI_API_TOKEN_SALT }}' \
-                -e ADMIN_JWT_SECRET='${{ secrets.STRAPI_ADMIN_JWT_SECRET }}' \
-                -e TRANSFER_TOKEN_SALT='${{ secrets.STRAPI_TRANSFER_TOKEN_SALT }}' \
-                -e ENCRYPTION_KEY='${{ secrets.STRAPI_ENCRYPTION_KEY }}' \
-                -e DATABASE_CLIENT='${{ secrets.STRAPI_DATABASE_CLIENT }}' \
-                -e DATABASE_HOST='${{ secrets.STRAPI_DATABASE_HOST }}' \
-                -e DATABASE_PORT='${{ secrets.STRAPI_DATABASE_PORT }}' \
-                -e DATABASE_NAME='${{ secrets.STRAPI_DATABASE_NAME }}' \
-                -e DATABASE_USERNAME='${{ secrets.STRAPI_DATABASE_USERNAME }}' \
-                -e DATABASE_PASSWORD='${{ secrets.STRAPI_DATABASE_PASSWORD }}' \
-                -e DATABASE_SSL='${{ secrets.STRAPI_DATABASE_SSL }}' \
-                -e DATABASE_FILENAME='${{ secrets.STRAPI_DATABASE_FILENAME }}' \
-                -e JWT_SECRET='${{ secrets.STRAPI_JWT_SECRET }}' \
+                -e HOST='${{ secrets.HOST }}' \
+                -e PORT='${{ secrets.PORT }}' \
+                -e APP_KEYS='${{ secrets.APP_KEYS }}' \
+                -e API_TOKEN_SALT='${{ secrets.API_TOKEN_SALT }}' \
+                -e ADMIN_JWT_SECRET='${{ secrets.ADMIN_JWT_SECRET }}' \
+                -e TRANSFER_TOKEN_SALT='${{ secrets.TRANSFER_TOKEN_SALT }}' \
+                -e ENCRYPTION_KEY='${{ secrets.ENCRYPTION_KEY }}' \
+                -e DATABASE_CLIENT='${{ secrets.DATABASE_CLIENT }}' \
+                -e DATABASE_HOST='${{ secrets.DATABASE_HOST }}' \
+                -e DATABASE_PORT='${{ secrets.DATABASE_PORT }}' \
+                -e DATABASE_NAME='${{ secrets.DATABASE_NAME }}' \
+                -e DATABASE_USERNAME='${{ secrets.DATABASE_USERNAME }}' \
+                -e DATABASE_PASSWORD='${{ secrets.DATABASE_PASSWORD }}' \
+                -e DATABASE_SSL='${{ secrets.DATABASE_SSL }}' \
+                -e DATABASE_FILENAME='${{ secrets.DATABASE_FILENAME }}' \
+                -e JWT_SECRET='${{ secrets.JWT_SECRET }}' \
                 "$IMAGE"
 
             docker image prune -af || true
