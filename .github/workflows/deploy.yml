@@ -65,6 +65,7 @@ jobs:
           key: ${{ secrets.DO_SSH_KEY }}
           passphrase: ${{ secrets.DO_SSH_PASSPHRASE }}
           script_stop: true
+          command_timeout: 60m # 60 minutes
           script: |
             set -e
             IMAGE="${{ needs.build-and-push.outputs.image_tag }}"
