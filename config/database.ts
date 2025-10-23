@@ -6,28 +6,8 @@ export default ({ env }) => {
   const connections = {
     mysql: {
       connection: {
-        client: env('DATABASE_CLIENT', 'postgres'),
-        connection: {
-          host: env('DATABASE_HOST'),
-          port: env.int('DATABASE_PORT', 5432),
-          database: env('DATABASE_NAME'),
-          user: env('DATABASE_USERNAME'),
-          password: env('DATABASE_PASSWORD'),
-          ssl: env.bool('DATABASE_SSL', true)
-            ? {
-                rejectUnauthorized: true,
-                ca: env('DATABASE_CA'),
-              }
-            : false,
-        },
-      },
-      pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
-    },
-    postgres: {
-      connection: {
-        connectionString: env('DATABASE_URL'),
         host: env('DATABASE_HOST', 'localhost'),
-        port: env.int('DATABASE_PORT', 5432),
+        port: env.int('DATABASE_PORT', 3306),
         database: env('DATABASE_NAME', 'strapi'),
         user: env('DATABASE_USERNAME', 'strapi'),
         password: env('DATABASE_PASSWORD', 'strapi'),
@@ -39,7 +19,29 @@ export default ({ env }) => {
           cipher: env('DATABASE_SSL_CIPHER', undefined),
           rejectUnauthorized: env.bool('DATABASE_SSL_REJECT_UNAUTHORIZED', true),
         },
-        schema: env('DATABASE_SCHEMA', 'public'),
+      },
+      pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
+    },
+    postgres: {
+      connection: {
+        client: env('DATABASE_CLIENT', 'postgres'),
+        connection: env('DATABASE_CLIENT') === 'postgres'
+          ? {
+              host: env('DATABASE_HOST'),
+              port: env.int('DATABASE_PORT', 5432),
+              database: env('DATABASE_NAME'),
+              user: env('DATABASE_USERNAME'),
+              password: env('DATABASE_PASSWORD'),
+              ssl: env.bool('DATABASE_SSL', true)
+                ? {
+                    rejectUnauthorized: true,
+                    ca: env('DATABASE_CA'), // <- comes from secret
+                  }
+                : false,
+            }
+          : {
+              filename: env('DATABASE_FILENAME', '.tmp/data.db'),
+            },
       },
       pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
     },

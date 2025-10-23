@@ -97,7 +97,7 @@ jobs:
                 -e DATABASE_SSL='${{ secrets.DATABASE_SSL }}' \
                 -e DATABASE_FILENAME='${{ secrets.DATABASE_FILENAME }}' \
                 -e JWT_SECRET='${{ secrets.JWT_SECRET }}' \
-                -e DATABASE_CA='${{ secrets.STRAPI_DATABASE_CA }}' \
+                -e DATABASE_CA='${{ secrets.DATABASE_CA }}' \
                 "$IMAGE"
 
             docker image prune -af || true
