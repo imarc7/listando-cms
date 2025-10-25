@@ -30,7 +30,7 @@ export interface ProsLandingAppSectionProsLandingAppSection
     displayName: 'Pros-landing-app-section';
   };
   attributes: {
-    sectionSubtitle: Schema.Attribute.String;
+    sectionSubtitle: Schema.Attribute.Text;
     sectionTitle: Schema.Attribute.String;
   };
 }

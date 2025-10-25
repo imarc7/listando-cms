@@ -9,7 +9,7 @@
       "type": "string"
     },
     "sectionSubtitle": {
-      "type": "string"
+      "type": "text"
     }
   },
   "config": {}
