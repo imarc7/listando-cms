@@ -24,14 +24,14 @@
       "component": "pros-landing-hero.pros-landing-hero",
       "repeatable": false
     },
-    "benefits": {
-      "type": "component",
-      "component": "pros-landing-benefits.pros-landing-benefits",
-      "repeatable": false
-    },
     "taskExamples": {
       "type": "component",
       "component": "pros-landing-task-examples.pros-landing-task-examples",
+      "repeatable": false
+    },
+    "benefits": {
+      "type": "component",
+      "component": "pros-landing-benefits.pros-landing-benefits",
       "repeatable": false
     },
     "appSection": {
