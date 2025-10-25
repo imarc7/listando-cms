@@ -80,7 +80,7 @@ jobs:
             docker run -d \
                 --name listando-cms \
                 --restart unless-stopped \
-                -p 127.0.0.1:1337:1337 \
+                -p 127.0.0.1:1370:1370 \
                 -e HOST='${{ secrets.HOST }}' \
                 -e PORT='${{ secrets.PORT }}' \
                 -e APP_KEYS='${{ secrets.APP_KEYS }}' \
