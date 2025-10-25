@@ -42,6 +42,10 @@ export interface ProsLandingBenefitsProsLandingBenefits
     displayName: 'Pros-landing-benefits';
   };
   attributes: {
+    items: Schema.Attribute.Component<
+      'text-icon-description.text-icon-description',
+      true
+    >;
     sectionSubtitle: Schema.Attribute.String;
     sectionTitle: Schema.Attribute.String;
   };

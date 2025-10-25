@@ -10,6 +10,11 @@
     },
     "sectionSubtitle": {
       "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "component": "text-icon-description.text-icon-description",
+      "repeatable": true
     }
   },
   "config": {}

@@ -447,7 +447,7 @@ export interface ApiProsLandingProsLanding extends Struct.CollectionTypeSchema {
     >;
     benefits: Schema.Attribute.Component<
       'pros-landing-benefits.pros-landing-benefits',
-      true
+      false
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -467,7 +467,7 @@ export interface ApiProsLandingProsLanding extends Struct.CollectionTypeSchema {
     serviceName: Schema.Attribute.String;
     taskExamples: Schema.Attribute.Component<
       'pros-landing-task-examples.pros-landing-task-examples',
-      true
+      false
     >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

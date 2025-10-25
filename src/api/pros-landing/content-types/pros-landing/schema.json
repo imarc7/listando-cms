@@ -22,12 +22,12 @@
     "benefits": {
       "type": "component",
       "component": "pros-landing-benefits.pros-landing-benefits",
-      "repeatable": true
+      "repeatable": false
     },
     "taskExamples": {
       "type": "component",
       "component": "pros-landing-task-examples.pros-landing-task-examples",
-      "repeatable": true
+      "repeatable": false
     },
     "appSection": {
       "type": "component",
