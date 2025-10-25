@@ -19,6 +19,11 @@
       "component": "meta.meta",
       "repeatable": false
     },
+    "hero": {
+      "type": "component",
+      "component": "pros-landing-hero.pros-landing-hero",
+      "repeatable": false
+    },
     "benefits": {
       "type": "component",
       "component": "pros-landing-benefits.pros-landing-benefits",

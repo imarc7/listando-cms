@@ -456,6 +456,10 @@ export interface ApiProsLandingProsLanding extends Struct.CollectionTypeSchema {
       'pros-landing-faq-section.pros-landing-faq-section',
       false
     >;
+    hero: Schema.Attribute.Component<
+      'pros-landing-hero.pros-landing-hero',
+      false
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
