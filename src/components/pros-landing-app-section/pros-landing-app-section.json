@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_pros_landing_app_section_pros_landing_app_sections",
+  "info": {
+    "displayName": "Pros-landing-app-section"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "sectionSubtitle": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

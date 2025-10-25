@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_pros_landing_task_card_pros_landing_task_cards",
+  "info": {
+    "displayName": "Pros-landing-task-card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "guests": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "type": {
+      "type": "string"
+    },
+    "budget": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

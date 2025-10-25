@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_text_icon_description_text_icon_descriptions",
+  "info": {
+    "displayName": "Text-icon-description"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

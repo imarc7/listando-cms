@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_pros_landing_benefits_pros_landing_benefits",
+  "info": {
+    "displayName": "Pros-landing-benefits"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "sectionSubtitle": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

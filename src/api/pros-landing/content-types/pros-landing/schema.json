@@ -4,7 +4,7 @@
   "info": {
     "singularName": "pros-landing",
     "pluralName": "pros-landings",
-    "displayName": "Pros-Landing"
+    "displayName": "ProsLanding"
   },
   "options": {
     "draftAndPublish": true
@@ -19,10 +19,25 @@
       "component": "meta.meta",
       "repeatable": false
     },
-    "FAQ": {
+    "benefits": {
       "type": "component",
-      "component": "faq.faq",
+      "component": "pros-landing-benefits.pros-landing-benefits",
       "repeatable": true
+    },
+    "taskExamples": {
+      "type": "component",
+      "component": "pros-landing-task-examples.pros-landing-task-examples",
+      "repeatable": true
+    },
+    "appSection": {
+      "type": "component",
+      "component": "pros-landing-app-section.pros-landing-app-section",
+      "repeatable": false
+    },
+    "faqSection": {
+      "type": "component",
+      "component": "pros-landing-faq-section.pros-landing-faq-section",
+      "repeatable": false
     }
   }
 }

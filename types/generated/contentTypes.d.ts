@@ -430,40 +430,10 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiProsLandingHeroItemProsLandingHeroItem
-  extends Struct.SingleTypeSchema {
-  collectionName: 'pros_landing_hero_items';
-  info: {
-    displayName: 'pros-landing-hero-item';
-    pluralName: 'pros-landing-hero-items';
-    singularName: 'pros-landing-hero-item';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icon: Schema.Attribute.String;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::pros-landing-hero-item.pros-landing-hero-item'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiProsLandingProsLanding extends Struct.CollectionTypeSchema {
   collectionName: 'pros_landings';
   info: {
-    displayName: 'Pros-Landing';
+    displayName: 'ProsLanding';
     pluralName: 'pros-landings';
     singularName: 'pros-landing';
   };
@@ -471,10 +441,21 @@ export interface ApiProsLandingProsLanding extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    appSection: Schema.Attribute.Component<
+      'pros-landing-app-section.pros-landing-app-section',
+      false
+    >;
+    benefits: Schema.Attribute.Component<
+      'pros-landing-benefits.pros-landing-benefits',
+      true
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    FAQ: Schema.Attribute.Component<'faq.faq', true>;
+    faqSection: Schema.Attribute.Component<
+      'pros-landing-faq-section.pros-landing-faq-section',
+      false
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -484,6 +465,10 @@ export interface ApiProsLandingProsLanding extends Struct.CollectionTypeSchema {
     MetaTags: Schema.Attribute.Component<'meta.meta', false>;
     publishedAt: Schema.Attribute.DateTime;
     serviceName: Schema.Attribute.String;
+    taskExamples: Schema.Attribute.Component<
+      'pros-landing-task-examples.pros-landing-task-examples',
+      true
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1000,7 +985,6 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::pros-landing-hero-item.pros-landing-hero-item': ApiProsLandingHeroItemProsLandingHeroItem;
       'api::pros-landing.pros-landing': ApiProsLandingProsLanding;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

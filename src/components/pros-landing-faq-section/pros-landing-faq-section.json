@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_pros_landing_faq_section_pros_landing_faq_sections",
+  "info": {
+    "displayName": "Pros-landing-faq-section"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "faqs": {
+      "type": "component",
+      "component": "faq.faq",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
