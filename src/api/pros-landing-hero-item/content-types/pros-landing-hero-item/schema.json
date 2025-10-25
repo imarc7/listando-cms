@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "pros_landing_hero_items",
+  "info": {
+    "singularName": "pros-landing-hero-item",
+    "pluralName": "pros-landing-hero-items",
+    "displayName": "pros-landing-hero-item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    }
+  }
+}

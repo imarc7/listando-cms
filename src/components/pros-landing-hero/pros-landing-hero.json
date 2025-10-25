@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_pros_landing_hero_pros_landing_heroes",
+  "info": {
+    "displayName": "Pros-Landing-Hero"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "ctaText": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "component": "text-icon.text-icon",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

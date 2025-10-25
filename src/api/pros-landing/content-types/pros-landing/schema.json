@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pros_landings",
+  "info": {
+    "singularName": "pros-landing",
+    "pluralName": "pros-landings",
+    "displayName": "Pros-Landing"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "serviceName": {
+      "type": "string"
+    },
+    "MetaTags": {
+      "type": "component",
+      "component": "meta.meta",
+      "repeatable": false
+    },
+    "FAQ": {
+      "type": "component",
+      "component": "faq.faq",
+      "repeatable": true
+    }
+  }
+}
