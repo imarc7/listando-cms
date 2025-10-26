@@ -17,6 +17,12 @@
     "ctaText": {
       "type": "string"
     },
+    "ctaSubtext": {
+      "type": "string"
+    },
+    "ctaLink": {
+      "type": "string"
+    },
     "items": {
       "type": "component",
       "component": "text-icon.text-icon",

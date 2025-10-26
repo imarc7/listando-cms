@@ -69,6 +69,8 @@ export interface ProsLandingHeroProsLandingHero extends Struct.ComponentSchema {
     displayName: 'Pros-Landing-Hero';
   };
   attributes: {
+    ctaLink: Schema.Attribute.String;
+    ctaSubtext: Schema.Attribute.String;
     ctaText: Schema.Attribute.String;
     imageUrl: Schema.Attribute.String;
     items: Schema.Attribute.Component<'text-icon.text-icon', true>;
