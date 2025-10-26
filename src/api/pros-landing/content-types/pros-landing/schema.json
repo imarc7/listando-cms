@@ -14,7 +14,7 @@
     "serviceName": {
       "type": "string"
     },
-    "MetaTags": {
+    "metaTags": {
       "type": "component",
       "component": "meta.meta",
       "repeatable": false
