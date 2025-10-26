@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_pros_landing_related_services_pros_landing_related_services",
+  "info": {
+    "displayName": "Pros-landing-related-services"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

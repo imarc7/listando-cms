@@ -79,6 +79,36 @@ export interface ProsLandingHeroProsLandingHero extends Struct.ComponentSchema {
   };
 }
 
+export interface ProsLandingRelatedServicesSectionProsLandingRelatedServicesSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_pros_landing_related_services_section_pros_landing_related_services_sections';
+  info: {
+    displayName: 'Pros-landing-related-services-section';
+  };
+  attributes: {
+    relatedServices: Schema.Attribute.Component<
+      'pros-landing-related-services.pros-landing-related-services',
+      true
+    >;
+    sectionSubtitle: Schema.Attribute.String;
+    sectionTitle: Schema.Attribute.String;
+  };
+}
+
+export interface ProsLandingRelatedServicesProsLandingRelatedServices
+  extends Struct.ComponentSchema {
+  collectionName: 'components_pros_landing_related_services_pros_landing_related_services';
+  info: {
+    displayName: 'Pros-landing-related-services';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    href: Schema.Attribute.String;
+    icon: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ProsLandingTaskCardProsLandingTaskCard
   extends Struct.ComponentSchema {
   collectionName: 'components_pros_landing_task_card_pros_landing_task_cards';
@@ -146,6 +176,8 @@ declare module '@strapi/strapi' {
       'pros-landing-benefits.pros-landing-benefits': ProsLandingBenefitsProsLandingBenefits;
       'pros-landing-faq-section.pros-landing-faq-section': ProsLandingFaqSectionProsLandingFaqSection;
       'pros-landing-hero.pros-landing-hero': ProsLandingHeroProsLandingHero;
+      'pros-landing-related-services-section.pros-landing-related-services-section': ProsLandingRelatedServicesSectionProsLandingRelatedServicesSection;
+      'pros-landing-related-services.pros-landing-related-services': ProsLandingRelatedServicesProsLandingRelatedServices;
       'pros-landing-task-card.pros-landing-task-card': ProsLandingTaskCardProsLandingTaskCard;
       'pros-landing-task-examples.pros-landing-task-examples': ProsLandingTaskExamplesProsLandingTaskExamples;
       'text-icon-description.text-icon-description': TextIconDescriptionTextIconDescription;

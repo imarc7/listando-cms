@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_pros_landing_related_services_section_pros_landing_related_services_sections",
+  "info": {
+    "displayName": "Pros-landing-related-services-section"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "sectionSubtitle": {
+      "type": "string"
+    },
+    "relatedServices": {
+      "type": "component",
+      "component": "pros-landing-related-services.pros-landing-related-services",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

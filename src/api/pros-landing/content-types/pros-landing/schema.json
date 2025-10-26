@@ -43,6 +43,11 @@
       "type": "component",
       "component": "pros-landing-faq-section.pros-landing-faq-section",
       "repeatable": false
+    },
+    "relatedServicesSection": {
+      "type": "component",
+      "component": "pros-landing-related-services-section.pros-landing-related-services-section",
+      "repeatable": false
     }
   }
 }

@@ -468,6 +468,10 @@ export interface ApiProsLandingProsLanding extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     metaTags: Schema.Attribute.Component<'meta.meta', false>;
     publishedAt: Schema.Attribute.DateTime;
+    relatedServicesSection: Schema.Attribute.Component<
+      'pros-landing-related-services-section.pros-landing-related-services-section',
+      false
+    >;
     serviceName: Schema.Attribute.String;
     taskExamples: Schema.Attribute.Component<
       'pros-landing-task-examples.pros-landing-task-examples',
