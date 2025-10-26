@@ -6,7 +6,7 @@ export interface FaqFaq extends Struct.ComponentSchema {
     displayName: 'FAQ';
   };
   attributes: {
-    answer: Schema.Attribute.Blocks;
+    answer: Schema.Attribute.RichText;
     question: Schema.Attribute.String;
   };
 }
