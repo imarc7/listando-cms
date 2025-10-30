@@ -18,6 +18,9 @@
     },
     "remainingTasks": {
       "type": "string"
+    },
+    "serviceDisplayName": {
+      "type": "string"
     }
   },
   "config": {}

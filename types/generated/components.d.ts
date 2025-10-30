@@ -136,6 +136,7 @@ export interface ProsLandingTaskExamplesProsLandingTaskExamples
     remainingTasks: Schema.Attribute.String;
     sectionSubtitle: Schema.Attribute.String;
     sectionTitle: Schema.Attribute.String;
+    serviceDisplayName: Schema.Attribute.String;
     tasks: Schema.Attribute.Component<
       'pros-landing-task-card.pros-landing-task-card',
       true
