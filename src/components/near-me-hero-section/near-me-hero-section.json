@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_near_me_hero_section_near_me_hero_sections",
+  "info": {
+    "displayName": "Near-me-hero-section"
+  },
+  "options": {},
+  "attributes": {
+    "imageUrl": {
+      "type": "string"
+    },
+    "h1": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "ctaBoxTitle": {
+      "type": "string"
+    },
+    "ctaBoxPoint1": {
+      "type": "string"
+    },
+    "ctaBoxPoint2": {
+      "type": "string"
+    },
+    "ctaBoxPoint3": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

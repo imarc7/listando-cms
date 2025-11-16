@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_related_link_related_links",
+  "info": {
+    "displayName": "Related-link"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -430,6 +430,59 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiNearMeNearMe extends Struct.CollectionTypeSchema {
+  collectionName: 'near_mes';
+  info: {
+    displayName: 'NearMe';
+    pluralName: 'near-mes';
+    singularName: 'near-me';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faqSection: Schema.Attribute.Component<
+      'near-me-faq-section.near-me-faq-section',
+      false
+    >;
+    heroSection: Schema.Attribute.Component<
+      'near-me-hero-section.near-me-hero-section',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::near-me.near-me'
+    > &
+      Schema.Attribute.Private;
+    mainContent: Schema.Attribute.Component<
+      'near-me-main-content.near-me-main-content',
+      true
+    >;
+    metaTags: Schema.Attribute.Component<'meta.meta', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    relatedArticles: Schema.Attribute.Component<
+      'related-article.related-article',
+      true
+    >;
+    relatedCostLinks: Schema.Attribute.Component<
+      'related-link.related-link',
+      true
+    >;
+    relatedSupplyLinks: Schema.Attribute.Component<
+      'related-link.related-link',
+      true
+    >;
+    serviceName: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProsLandingProsLanding extends Struct.CollectionTypeSchema {
   collectionName: 'pros_landings';
   info: {
@@ -993,6 +1046,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::near-me.near-me': ApiNearMeNearMe;
       'api::pros-landing.pros-landing': ApiProsLandingProsLanding;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

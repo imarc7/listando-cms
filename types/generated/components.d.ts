@@ -23,6 +23,47 @@ export interface MetaMeta extends Struct.ComponentSchema {
   };
 }
 
+export interface NearMeFaqSectionNearMeFaqSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_near_me_faq_section_near_me_faq_sections';
+  info: {
+    displayName: 'Near-me-faq-section';
+  };
+  attributes: {
+    faqs: Schema.Attribute.Component<'faq.faq', true>;
+    sectionTitle: Schema.Attribute.String;
+  };
+}
+
+export interface NearMeHeroSectionNearMeHeroSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_near_me_hero_section_near_me_hero_sections';
+  info: {
+    displayName: 'Near-me-hero-section';
+  };
+  attributes: {
+    ctaBoxPoint1: Schema.Attribute.String;
+    ctaBoxPoint2: Schema.Attribute.String;
+    ctaBoxPoint3: Schema.Attribute.String;
+    ctaBoxTitle: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    h1: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+  };
+}
+
+export interface NearMeMainContentNearMeMainContent
+  extends Struct.ComponentSchema {
+  collectionName: 'components_near_me_main_content_near_me_main_contents';
+  info: {
+    displayName: 'Near-me-main-content';
+  };
+  attributes: {
+    h2: Schema.Attribute.String;
+    text: Schema.Attribute.RichText;
+  };
+}
+
 export interface ProsLandingAppSectionProsLandingAppSection
   extends Struct.ComponentSchema {
   collectionName: 'components_pros_landing_app_section_pros_landing_app_sections';
@@ -144,6 +185,30 @@ export interface ProsLandingTaskExamplesProsLandingTaskExamples
   };
 }
 
+export interface RelatedArticleRelatedArticle extends Struct.ComponentSchema {
+  collectionName: 'components_related_article_related_articles';
+  info: {
+    displayName: 'Related-article';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface RelatedLinkRelatedLink extends Struct.ComponentSchema {
+  collectionName: 'components_related_link_related_links';
+  info: {
+    displayName: 'Related-link';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+  };
+}
+
 export interface TextIconDescriptionTextIconDescription
   extends Struct.ComponentSchema {
   collectionName: 'components_text_icon_description_text_icon_descriptions';
@@ -173,6 +238,9 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'faq.faq': FaqFaq;
       'meta.meta': MetaMeta;
+      'near-me-faq-section.near-me-faq-section': NearMeFaqSectionNearMeFaqSection;
+      'near-me-hero-section.near-me-hero-section': NearMeHeroSectionNearMeHeroSection;
+      'near-me-main-content.near-me-main-content': NearMeMainContentNearMeMainContent;
       'pros-landing-app-section.pros-landing-app-section': ProsLandingAppSectionProsLandingAppSection;
       'pros-landing-benefits.pros-landing-benefits': ProsLandingBenefitsProsLandingBenefits;
       'pros-landing-faq-section.pros-landing-faq-section': ProsLandingFaqSectionProsLandingFaqSection;
@@ -181,6 +249,8 @@ declare module '@strapi/strapi' {
       'pros-landing-related-services.pros-landing-related-services': ProsLandingRelatedServicesProsLandingRelatedServices;
       'pros-landing-task-card.pros-landing-task-card': ProsLandingTaskCardProsLandingTaskCard;
       'pros-landing-task-examples.pros-landing-task-examples': ProsLandingTaskExamplesProsLandingTaskExamples;
+      'related-article.related-article': RelatedArticleRelatedArticle;
+      'related-link.related-link': RelatedLinkRelatedLink;
       'text-icon-description.text-icon-description': TextIconDescriptionTextIconDescription;
       'text-icon.text-icon': TextIconTextIcon;
     }

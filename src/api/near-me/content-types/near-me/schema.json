@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "near_mes",
+  "info": {
+    "singularName": "near-me",
+    "pluralName": "near-mes",
+    "displayName": "NearMe"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "serviceName": {
+      "type": "string"
+    },
+    "metaTags": {
+      "type": "component",
+      "component": "meta.meta",
+      "repeatable": false
+    },
+    "heroSection": {
+      "type": "component",
+      "component": "near-me-hero-section.near-me-hero-section",
+      "repeatable": false
+    },
+    "mainContent": {
+      "type": "component",
+      "component": "near-me-main-content.near-me-main-content",
+      "repeatable": true
+    },
+    "faqSection": {
+      "type": "component",
+      "component": "near-me-faq-section.near-me-faq-section",
+      "repeatable": false
+    },
+    "relatedArticles": {
+      "type": "component",
+      "component": "related-article.related-article",
+      "repeatable": true
+    },
+    "relatedCostLinks": {
+      "type": "component",
+      "component": "related-link.related-link",
+      "repeatable": true
+    },
+    "relatedSupplyLinks": {
+      "type": "component",
+      "component": "related-link.related-link",
+      "repeatable": true
+    }
+  }
+}

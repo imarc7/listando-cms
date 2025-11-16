@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_near_me_main_content_near_me_main_contents",
+  "info": {
+    "displayName": "Near-me-main-content"
+  },
+  "options": {},
+  "attributes": {
+    "h2": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}
