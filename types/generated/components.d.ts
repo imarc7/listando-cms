@@ -185,6 +185,21 @@ export interface ProsLandingTaskExamplesProsLandingTaskExamples
   };
 }
 
+export interface ProsListProPitchSectionProsListProPitchSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_pros_list_pro_pitch_section_pros_list_pro_pitch_sections';
+  info: {
+    displayName: 'Pros-list-pro-pitch-section';
+  };
+  attributes: {
+    ctaTitle: Schema.Attribute.String;
+    ctaUrl: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    imageUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface RelatedArticleRelatedArticle extends Struct.ComponentSchema {
   collectionName: 'components_related_article_related_articles';
   info: {
@@ -249,6 +264,7 @@ declare module '@strapi/strapi' {
       'pros-landing-related-services.pros-landing-related-services': ProsLandingRelatedServicesProsLandingRelatedServices;
       'pros-landing-task-card.pros-landing-task-card': ProsLandingTaskCardProsLandingTaskCard;
       'pros-landing-task-examples.pros-landing-task-examples': ProsLandingTaskExamplesProsLandingTaskExamples;
+      'pros-list-pro-pitch-section.pros-list-pro-pitch-section': ProsListProPitchSectionProsListProPitchSection;
       'related-article.related-article': RelatedArticleRelatedArticle;
       'related-link.related-link': RelatedLinkRelatedLink;
       'text-icon-description.text-icon-description': TextIconDescriptionTextIconDescription;

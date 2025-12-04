@@ -44,10 +44,10 @@
       "component": "related-link.related-link",
       "repeatable": true
     },
-    "relatedSupplyLinks": {
+    "prosPitch": {
       "type": "component",
-      "component": "related-link.related-link",
-      "repeatable": true
+      "component": "pros-list-pro-pitch-section.pros-list-pro-pitch-section",
+      "repeatable": false
     }
   }
 }

@@ -463,16 +463,16 @@ export interface ApiNearMeNearMe extends Struct.CollectionTypeSchema {
       true
     >;
     metaTags: Schema.Attribute.Component<'meta.meta', false>;
+    prosPitch: Schema.Attribute.Component<
+      'pros-list-pro-pitch-section.pros-list-pro-pitch-section',
+      false
+    >;
     publishedAt: Schema.Attribute.DateTime;
     relatedArticles: Schema.Attribute.Component<
       'related-article.related-article',
       true
     >;
     relatedCostLinks: Schema.Attribute.Component<
-      'related-link.related-link',
-      true
-    >;
-    relatedSupplyLinks: Schema.Attribute.Component<
       'related-link.related-link',
       true
     >;

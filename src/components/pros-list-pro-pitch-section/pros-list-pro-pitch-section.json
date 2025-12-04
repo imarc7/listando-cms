@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_pros_list_pro_pitch_section_pros_list_pro_pitch_sections",
+  "info": {
+    "displayName": "Pros-list-pro-pitch-section"
+  },
+  "options": {},
+  "attributes": {
+    "imageUrl": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "ctaTitle": {
+      "type": "string"
+    },
+    "ctaUrl": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
