@@ -461,7 +461,7 @@ export interface ApiCityListCityList extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     mainContent: Schema.Attribute.Component<
       'near-me-main-content.near-me-main-content',
-      false
+      true
     >;
     metaTags: Schema.Attribute.Component<'meta.meta', false>;
     prosPitch: Schema.Attribute.Component<

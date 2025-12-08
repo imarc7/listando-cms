@@ -30,7 +30,7 @@
     "mainContent": {
       "type": "component",
       "component": "near-me-main-content.near-me-main-content",
-      "repeatable": false
+      "repeatable": true
     },
     "faqSection": {
       "type": "component",
