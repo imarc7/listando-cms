@@ -430,6 +430,60 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCityListCityList extends Struct.CollectionTypeSchema {
+  collectionName: 'city_lists';
+  info: {
+    displayName: 'CityList';
+    pluralName: 'city-lists';
+    singularName: 'city-list';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cityName: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faqSection: Schema.Attribute.Component<
+      'near-me-faq-section.near-me-faq-section',
+      false
+    >;
+    heroSection: Schema.Attribute.Component<
+      'near-me-hero-section.near-me-hero-section',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::city-list.city-list'
+    > &
+      Schema.Attribute.Private;
+    mainContent: Schema.Attribute.Component<
+      'near-me-main-content.near-me-main-content',
+      false
+    >;
+    metaTags: Schema.Attribute.Component<'meta.meta', false>;
+    prosPitch: Schema.Attribute.Component<
+      'pros-list-pro-pitch-section.pros-list-pro-pitch-section',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    relatedArticles: Schema.Attribute.Component<
+      'related-article.related-article',
+      true
+    >;
+    relatedCostLinks: Schema.Attribute.Component<
+      'related-link.related-link',
+      true
+    >;
+    serviceName: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiNearMeNearMe extends Struct.CollectionTypeSchema {
   collectionName: 'near_mes';
   info: {
@@ -1046,6 +1100,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::city-list.city-list': ApiCityListCityList;
       'api::near-me.near-me': ApiNearMeNearMe;
       'api::pros-landing.pros-landing': ApiProsLandingProsLanding;
       'plugin::content-releases.release': PluginContentReleasesRelease;

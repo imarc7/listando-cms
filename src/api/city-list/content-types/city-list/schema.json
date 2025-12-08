@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "city_lists",
+  "info": {
+    "singularName": "city-list",
+    "pluralName": "city-lists",
+    "displayName": "CityList"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "serviceName": {
+      "type": "string"
+    },
+    "cityName": {
+      "type": "string"
+    },
+    "metaTags": {
+      "type": "component",
+      "component": "meta.meta",
+      "repeatable": false
+    },
+    "heroSection": {
+      "type": "component",
+      "component": "near-me-hero-section.near-me-hero-section",
+      "repeatable": false
+    },
+    "mainContent": {
+      "type": "component",
+      "component": "near-me-main-content.near-me-main-content",
+      "repeatable": false
+    },
+    "faqSection": {
+      "type": "component",
+      "component": "near-me-faq-section.near-me-faq-section",
+      "repeatable": false
+    },
+    "relatedArticles": {
+      "type": "component",
+      "component": "related-article.related-article",
+      "repeatable": true
+    },
+    "relatedCostLinks": {
+      "type": "component",
+      "component": "related-link.related-link",
+      "repeatable": true
+    },
+    "prosPitch": {
+      "type": "component",
+      "component": "pros-list-pro-pitch-section.pros-list-pro-pitch-section",
+      "repeatable": false
+    }
+  }
+}
