@@ -602,43 +602,87 @@ export interface ApiProsLandingProsLanding extends Struct.CollectionTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
     appSection: Schema.Attribute.Component<
       'pros-landing-app-section.pros-landing-app-section',
       false
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     benefits: Schema.Attribute.Component<
       'pros-landing-benefits.pros-landing-benefits',
       false
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     faqSection: Schema.Attribute.Component<
       'pros-landing-faq-section.pros-landing-faq-section',
       false
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     hero: Schema.Attribute.Component<
       'pros-landing-hero.pros-landing-hero',
       false
-    >;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::pros-landing.pros-landing'
-    > &
-      Schema.Attribute.Private;
-    metaTags: Schema.Attribute.Component<'meta.meta', false>;
+    >;
+    metaTags: Schema.Attribute.Component<'meta.meta', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     relatedServicesSection: Schema.Attribute.Component<
       'pros-landing-related-services-section.pros-landing-related-services-section',
       false
-    >;
-    serviceName: Schema.Attribute.String;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    serviceName: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     taskExamples: Schema.Attribute.Component<
       'pros-landing-task-examples.pros-landing-task-examples',
       false
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

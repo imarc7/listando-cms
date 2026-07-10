@@ -9,43 +9,87 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "serviceName": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "metaTags": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "meta.meta",
       "repeatable": false
     },
     "hero": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "pros-landing-hero.pros-landing-hero",
       "repeatable": false
     },
     "taskExamples": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "pros-landing-task-examples.pros-landing-task-examples",
       "repeatable": false
     },
     "benefits": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "pros-landing-benefits.pros-landing-benefits",
       "repeatable": false
     },
     "appSection": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "pros-landing-app-section.pros-landing-app-section",
       "repeatable": false
     },
     "faqSection": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "pros-landing-faq-section.pros-landing-faq-section",
       "repeatable": false
     },
     "relatedServicesSection": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "pros-landing-related-services-section.pros-landing-related-services-section",
       "repeatable": false
     }
