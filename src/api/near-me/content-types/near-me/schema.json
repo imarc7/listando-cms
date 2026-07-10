@@ -9,43 +9,87 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "serviceName": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "metaTags": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "meta.meta",
       "repeatable": false
     },
     "heroSection": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "near-me-hero-section.near-me-hero-section",
       "repeatable": false
     },
     "mainContent": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "near-me-main-content.near-me-main-content",
       "repeatable": true
     },
     "faqSection": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "near-me-faq-section.near-me-faq-section",
       "repeatable": false
     },
     "relatedArticles": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "related-article.related-article",
       "repeatable": true
     },
     "relatedCostLinks": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "related-link.related-link",
       "repeatable": true
     },
     "prosPitch": {
       "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "pros-list-pro-pitch-section.pros-list-pro-pitch-section",
       "repeatable": false
     }
