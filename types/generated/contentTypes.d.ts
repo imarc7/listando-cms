@@ -623,6 +623,12 @@ export interface ApiProsLandingProsLanding extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    basicServiceId: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     benefits: Schema.Attribute.Component<
       'pros-landing-benefits.pros-landing-benefits',
       false
