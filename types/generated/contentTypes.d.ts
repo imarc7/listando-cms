@@ -511,6 +511,12 @@ export interface ApiNearMeNearMe extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    basicServiceId: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
